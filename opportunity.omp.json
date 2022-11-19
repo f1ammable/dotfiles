@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "diamond",
+          "leading_diamond": "\uE0B6",
+          "foreground": "#0e0f09",
+          "background": "#6272a4"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B4",
+          "foreground": "#0e0f09",
+          "background": "#bd93f9",
+          "properties": {
+            "style": "full"
+          }
+        }
+      ]
+    },
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "git",
+          "style": "diamond",
+          "leading_diamond": "\uE0B6",
+          "trailing_diamond": "\uE0B4 ",
+          "foreground": "#0e0f09",
+          "background": "#ffb86c",
+          "template": "git:{{ .HEAD }}",
+          "properties": {
+            "branch_max_length": 25,
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "branch_icon": ""
+          }
+        },
+        {
+          "type": "cmake",
+          "style": "diamond",
+          "leading_diamond": "\uE0B6",
+          "trailing_diamond": "\uE0B4",
+          "foreground": "#0e0f09",
+          "background": "#ff79c6",
+          "template": "<#282a36>\ue61e</> {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        }
+      ]
+    }
+  ]
+}
