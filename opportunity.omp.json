@@ -9,20 +9,22 @@
       "segments": [
         {
           "type": "os",
-          "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "foreground": "#0e0f09",
-          "background": "#6272a4"
+          "style": "plain",
+          "foreground": "#FB4934"
         },
         {
           "type": "path",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B4",
-          "foreground": "#0e0f09",
-          "background": "#bd93f9",
+          "style": "plain",
+          "foreground": "#B8BB26",
           "properties": {
             "style": "full"
           }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\uEA9F",
+          "foreground": "#EDBBB2"
         }
       ]
     },
@@ -32,12 +34,9 @@
       "segments": [
         {
           "type": "git",
-          "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B4 ",
-          "foreground": "#0e0f09",
-          "background": "#ffb86c",
-          "template": "git:{{ .HEAD }}",
+          "style": "plain",
+          "foreground": "#FABD2F",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "properties": {
             "branch_max_length": 25,
             "fetch_stash_count": true,
@@ -48,12 +47,18 @@
         },
         {
           "type": "cmake",
-          "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#0e0f09",
-          "background": "#ff79c6",
-          "template": "<#282a36>\ue61e</> {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+          "style": "plain",
+          "foreground": "#83A598",
+          "template": "\ue61e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#D3869B",
+          "template": "{{ .FormattedMs }}",
+          "properties": {
+            "style": "austin"
+          }
         }
       ]
     }
