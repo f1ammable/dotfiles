@@ -10,12 +10,19 @@
         {
           "type": "os",
           "style": "plain",
-          "foreground": "#FB4934"
+          "foreground": "#FB4934",
+          "template": "{{ if .WSL}}[WSL] {{ end }}{{.Icon}} "
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#B8BB26",
+          "template": "on {{ .HostName }}"
         },
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#B8BB26",
+          "foreground": "#8EC07C",
           "properties": {
             "style": "full"
           }
@@ -49,13 +56,13 @@
           "type": "cmake",
           "style": "plain",
           "foreground": "#83A598",
-          "template": "\ue61e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+          "template": "\ue61e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
         },
         {
           "type": "executiontime",
           "style": "plain",
           "foreground": "#D3869B",
-          "template": "{{ .FormattedMs }}",
+          "template": "{{ .FormattedMs }} ",
           "properties": {
             "style": "austin"
           }
