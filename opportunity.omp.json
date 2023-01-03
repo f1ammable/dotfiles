@@ -42,7 +42,7 @@
           "type": "git",
           "style": "plain",
           "foreground": "#FABD2F",
-          "template": "git:({{ .HEAD }}{{if .BranchStatus }}, {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} | \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} | \uF046 {{ .Staging.String }}{{ end }}) ",
+          "template": "git:({{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} {{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}) ",
           "properties": {
             "branch_max_length": 25,
             "fetch_stash_count": true,
