@@ -11,13 +11,12 @@
           "type": "os",
           "style": "plain",
           "foreground": "#FB4934",
-          "template": "{{ if .WSL}}[WSL] {{ end }}{{.Icon}} "
-        },
-        {
-          "type": "session",
-          "style": "plain",
-          "foreground": "#B8BB26",
-          "template": "on {{ .HostName }}"
+          "template": "{{ if .WSL}}[WSL] {{ end }}{{.Icon}}",
+          "properties": {
+            "macos": "osx",
+            "windows": "win",
+            "ubuntu": "ubuntu"
+          }
         },
         {
           "type": "path",
@@ -30,7 +29,7 @@
         {
           "type": "text",
           "style": "plain",
-          "template": "\uEA9F",
+          "template": "\uF101",
           "foreground": "#EDBBB2"
         }
       ]
@@ -43,7 +42,7 @@
           "type": "git",
           "style": "plain",
           "foreground": "#FABD2F",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": "git:({{ .HEAD }}{{if .BranchStatus }}, {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} | \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} | \uF046 {{ .Staging.String }}{{ end }}) ",
           "properties": {
             "branch_max_length": 25,
             "fetch_stash_count": true,
