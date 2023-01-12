@@ -1,3 +1,5 @@
+tmux
+
 # Aliases
 alias ll="lsd -la"
 alias ls="lsd"
@@ -15,6 +17,4 @@ eval "$(oh-my-posh init zsh --config ~/dotfiles/opportunity.omp.json)"
  > ^ <
 
 EOF
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
