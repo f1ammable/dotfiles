@@ -8,14 +8,12 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "os",
+          "type": "time",
           "style": "plain",
           "foreground": "#FB4934",
-          "template": "{{ if .WSL}}[WSL] {{ end }}{{.Icon}}",
+          "template": "{{ .CurrentDate | date .Format }}",
           "properties": {
-            "macos": "osx",
-            "windows": "win",
-            "ubuntu": "ubuntu"
+            "time_format": "15:04:05"
           }
         },
         {
@@ -23,48 +21,34 @@
           "style": "plain",
           "foreground": "#8EC07C",
           "properties": {
-            "style": "full"
+            "style": "mixed",
+            "mixed_threshold": 8
           }
         },
-        {
-          "type": "text",
-          "style": "plain",
-          "template": "\uF101",
-          "foreground": "#EDBBB2"
-        }
-      ]
-    },
-    {
-      "type": "rprompt",
-      "alignment": "right",
-      "segments": [
         {
           "type": "git",
           "style": "plain",
           "foreground": "#FABD2F",
-          "template": "git:({{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} {{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}) ",
-          "properties": {
-            "branch_max_length": 25,
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true,
-            "branch_icon": ""
-          }
+          "template": "{{ .HEAD}} "
         },
         {
           "type": "cmake",
           "style": "plain",
           "foreground": "#83A598",
           "template": "\ue61e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
-        },
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "type": "prompt",
+      "segments": [
         {
-          "type": "executiontime",
+          "type": "text",
           "style": "plain",
-          "foreground": "#D3869B",
-          "template": "{{ .FormattedMs }} ",
-          "properties": {
-            "style": "austin"
-          }
+          "template": "\uea9f",
+          "foreground": "#EDBBB2"
         }
       ]
     }
