@@ -1,0 +1,53 @@
+@define-color bar_bg_colour rgba(40, 40, 40, 0);
+@define-color bg_colour rgb (60, 56, 54);
+@define-color active_colour rgb (142, 192, 124);
+@define-color text_colour rgb (213, 196, 161);
+@define-color red rgb (251, 73, 52);
+@define-color blue rgb (131, 165, 152);
+@define-color purple rgb (211, 134, 155);
+@define-color yellow rgb (250, 189, 47);
+@define-color orange rgb (214, 94, 14);
+
+* {
+    color: @text_colour;
+    font-family: 'JetBrainsMono Nerd Font Mono';
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 16px;
+}
+
+window#waybar {
+    background: @bar_bg_colour;
+}
+
+#custom-menu, #cpu, #workspaces button, #custom-spotify, #pulseaudio, #clock {
+    background: @bg_colour;
+    padding: 0em 0.8em;
+    margin: 0.3em;
+}
+
+#custom-menu {
+    font-size: 18px;
+    border: 2px solid @purple;
+    padding-right: 0.5em;
+}
+
+#cpu {
+    border: 2px solid @yellow;
+}
+
+#workspaces button.active {
+    border: 2px solid @active_colour;
+}
+
+#custom-spotify {
+    border: 2px solid @orange;    
+}
+
+#pulseaudio {
+    border: 2px solid @blue;
+}
+
+#clock {
+    border: 2px solid @red;
+}
