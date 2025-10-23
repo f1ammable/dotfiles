@@ -1,0 +1,16 @@
+vim.o.number = true
+vim.o.relativenumber = false
+vim.o.wrap = false
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.swapfile = false
+vim.g.mapleader = " "
+vim.o.expandtab = true
+vim.o.signcolumn = "yes"
+vim.o.winborder = "rounded"
+vim.diagnostic.config({ virtual_text = false })
+vim.g.barbar_auto_setup = false
+vim.o.clipboard = ""
+vim.o.cmdheight = 0
+vim.o.fillchars = "vert:|,horiz:-"

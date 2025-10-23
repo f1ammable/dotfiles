@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    "barbar.nvim": [],
+    "blink.cmp": [],
+    "fzf-lua": {
+      "rev": "c0c0926",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "gruvbox.nvim": [],
+    "lualine.nvim": [],
+    "mini.ai": [],
+    "mini.diff": {
+      "rev": "a2df2a9",
+      "src": "https://github.com/nvim-mini/mini.diff"
+    },
+    "mini.pick": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "nvim-web-devicons": [],
+    "oil.nvim": [],
+    "tiny-inline-diagnostic.nvim": [],
+    "todo-comments.nvim": [],
+    "typst-preview.nvim": {
+      "rev": "1603d37",
+      "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "vim-wakatime": []
+  }
+}
