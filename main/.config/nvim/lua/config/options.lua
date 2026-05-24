@@ -14,3 +14,4 @@ vim.g.barbar_auto_setup = false
 vim.o.clipboard = ""
 vim.o.cmdheight = 0
 vim.o.fillchars = "vert:|,horiz:-"
+vim.o.relativenumber = true
