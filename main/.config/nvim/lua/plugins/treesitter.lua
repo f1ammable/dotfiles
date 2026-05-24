@@ -1,23 +1,18 @@
-local function setup_treesitter()
-  local languages = { "lua", "c", "cmake", "cpp", "python" }
+local languages = { "lua", "c", "cmake", "cpp", "python" }
 
-  require "nvim-treesitter.configs".setup({
-    ensure_installed = languages,
-    highlight = { enable = true },
-    indent = { enable = true }
-  })
+local ts = require('nvim-treesitter')
+local installed = ts.get_installed()
+local missing = vim.tbl_filter(function(lang)
+  return not vim.list_contains(installed, lang)
+end, languages)
 
-  local parsers = require "nvim-treesitter.parsers"
-  local missing = {}
-  for _, lang in ipairs(languages) do
-    if not parsers.has_parser(lang) then
-      table.insert(missing, lang)
-    end
-  end
-
-  if #missing > 0 then
-    vim.cmd('TSUpdate')
-  end
+if #missing > 0 then
+  ts.install(missing)
 end
 
-vim.defer_fn(setup_treesitter, 100)
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function()
+    pcall(vim.treesitter.start)
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end,
+})

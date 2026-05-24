@@ -1,0 +1,2 @@
+-- vim-matchup works automatically; configure via vim.g if needed
+-- vim.g.matchup_matchparen_offscreen = { method = "popup" }

@@ -1,5 +1,6 @@
 # Disable suggestions
 set -g fish_autosuggestion_enabled 0
+set fish_greeting
 
 # Env vars
 set -gx BAT_THEME gruvbox-dark
@@ -8,7 +9,7 @@ set -gx EDITOR nvim
 # PATH
 fish_add_path /opt/homebrew/bin/
 fish_add_path (brew --prefix openjdk)/bin
-fish_add_path -g "/Users/avenue/.local/bin"
+fish_add_path -g "/Users/gabi/.local/bin"
 
 # JAVA_HOME
 set -gx JAVA_HOME (brew --prefix openjdk)

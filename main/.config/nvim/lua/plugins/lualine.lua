@@ -14,9 +14,25 @@ require('lualine').setup {
       right_padding = 0
     }, { 'filename', separator = { left = '', right = '' } }, { 'branch', separator = { left = '', right = '' } }, { 'diff', separator = { right = '' } } },
     lualine_c = {},
-    lualine_x = {},
-    lualine_y = { { 'filetype', separator = { left = '' } }, { 'progress', separator = { right = '' } }, { function() return
-      ' ' end,
+    lualine_x = { {
+      function() return ' ' .. require('wakatime').statusline() end,
+      cond = function()
+        local ok, wk = pcall(require, 'wakatime'); return ok and wk.statusline() ~= ''
+      end,
+      color = { fg = '#ebdbb2', bg = '#504945' },
+      separator = { left = '', right = '' },
+      ['__wakatime_statusline'] = true,
+    }, {
+      function() return ' ' end,
+      color = 'LualineInvisible',
+      separator = '',
+      left_padding = 0,
+      right_padding = 0
+    } },
+    lualine_y = { { 'filetype', separator = { left = '' } }, { 'progress', separator = { right = '' } }, { function()
+      return
+      ' '
+    end,
       color = 'LualineInvisible',
       left_padding = 0,
       right_padding = 0 } },

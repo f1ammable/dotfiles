@@ -1,29 +1,96 @@
 {
   "plugins": {
-    "barbar.nvim": [],
-    "blink.cmp": [],
+    "barbar.nvim": {
+      "rev": "a4bef5b4fc1f064f2f673172252028eae18191c9",
+      "src": "https://github.com/romgrk/barbar.nvim"
+    },
+    "blink.cmp": {
+      "rev": "d3874d2a13aa19b095bdd10d37a82a8f0aa7cad3",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "src": "https://github.com/saghen/blink.lib"
+    },
+    "diffview.nvim": {
+      "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
+      "src": "https://github.com/sindrets/diffview.nvim"
+    },
     "fzf-lua": {
       "rev": "c0c0926",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
-    "gruvbox.nvim": [],
-    "lualine.nvim": [],
-    "mini.ai": [],
+    "gruvbox.nvim": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
+    "haskell-tools.nvim": {
+      "rev": "2769de70fd4b3aae3ff931532b68a4af82e0a5fb",
+      "src": "https://github.com/mrcjkb/haskell-tools.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "markdown-preview.nvim": {
+      "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
+      "src": "https://github.com/iamcco/markdown-preview.nvim"
+    },
+    "matchit": {
+      "rev": "5673005ddcd2940bb9c197c85c92a5490459742f",
+      "src": "https://github.com/chrisbra/matchit"
+    },
+    "mini.ai": {
+      "rev": "7e10ce8468c0fce4f527ae2c0e5c484f7667f73d",
+      "src": "https://github.com/echasnovski/mini.ai"
+    },
     "mini.diff": {
       "rev": "a2df2a9",
       "src": "https://github.com/nvim-mini/mini.diff"
     },
-    "mini.pick": [],
-    "nvim-lspconfig": [],
-    "nvim-treesitter": [],
-    "nvim-web-devicons": [],
-    "oil.nvim": [],
-    "tiny-inline-diagnostic.nvim": [],
-    "todo-comments.nvim": [],
+    "mini.pick": {
+      "rev": "437d44eb57312f23e6b931704694fc294922cd88",
+      "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "nvim-lspconfig": {
+      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-treesitter-context": {
+      "rev": "b0c45cefe2c8f7b55fc46f34e563bc428ef99636",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
+    },
+    "nvim-web-devicons": {
+      "rev": "4fc505ac7bd7692824a142e96e5f529c133862f8",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oil.nvim": {
+      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "147af4e49f51dd48f41972de26552872b8ba7b25",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+    },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim"
+    },
     "typst-preview.nvim": {
       "rev": "1603d37",
       "src": "https://github.com/chomosuke/typst-preview.nvim"
     },
-    "vim-wakatime": []
+    "vim-matchup": {
+      "rev": "a2d618496223386844acb5a6763cfc3cc1357af1",
+      "src": "https://github.com/andymass/vim-matchup"
+    },
+    "vim-wakatime": {
+      "rev": "5f458398a217735b908ae40d1c2851cc69e7d817",
+      "src": "https://github.com/wakatime/vim-wakatime"
+    }
   }
 }

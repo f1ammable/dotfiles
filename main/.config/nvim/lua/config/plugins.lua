@@ -14,7 +14,11 @@ vim.pack.add({
   { src = "https://github.com/folke/todo-comments.nvim" },
   { src = "https://github.com/ibhagwan/fzf-lua" },
   { src = "https://github.com/nvim-mini/mini.diff" },
-  { src = "https://github.com/chomosuke/typst-preview.nvim" }
+  { src = "https://github.com/chomosuke/typst-preview.nvim" },
+  { src = "https://github.com/saghen/blink.lib" },
+  { src = "https://github.com/andymass/vim-matchup" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
+  { src = "https://github.com/sindrets/diffview.nvim" }
 })
 
 require("plugins.treesitter")
@@ -31,3 +35,6 @@ require("plugins.comments")
 require("plugins.fzf")
 require("plugins.diff")
 require("plugins.typst")
+require("plugins.context")
+require("plugins.diffview")
+require("plugins.markdown")

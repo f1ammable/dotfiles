@@ -1,0 +1,15 @@
+# Fish universal variables
+.config/fish/fish_variables
+
+# TPM plugin binaries
+.config/tmux/plugins/
+
+# Fish 4.3 migration artifacts
+.config/fish/conf.d/fish_frozen_key_bindings.fish
+.config/fish/conf.d/fish_frozen_theme.fish
+
+# Fisher-managed files
+.config/fish/conf.d/hydro.fish
+.config/fish/functions/fisher.fish
+.config/fish/functions/fish_mode_prompt.fish
+.config/fish/completions/fisher.fish
